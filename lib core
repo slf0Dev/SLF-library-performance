@@ -199,7 +199,7 @@ spawn(function()
 	end)
 end
 
-function Library:Window(Title)
+function Library:Window(Title,keycode)
 local foldersCount = 0
 local Window = {}
 Windows += 1
@@ -299,6 +299,21 @@ MainTitle.TextColor3 = Color3.fromRGB(132, 132, 132)
 MainTitle.TextSize = 20.000
 MainTitle.TextXAlignment = Enum.TextXAlignment.Left
 MainTitle.Text = Title
+
+
+UserInputService.InputBegan:Connect(function(key,isTyping)
+        if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
+            if Hided then
+                Hided = false
+                Topbar:TweenPosition(UDim2.new(0,Topbar.Position.X,0,-1),"Out","Quad",0.15)
+            else
+                Hided = true
+                Topbar:TweenPosition(UDim2.new(0,Topbar.Position.X,0,-1),"Out","Quad",0.15)
+
+            end
+        end
+    end)
+
 
 local UIScale = Instance.new("UIScale",lib)
 UIScale.Scale = LibraryOptions["Scale"]
