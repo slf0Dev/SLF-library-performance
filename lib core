@@ -658,7 +658,7 @@ UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.from
 UIGradient.Parent = Button
 
 	Button.MouseButton1Click:Connect(function()
-	callback()
+	spawn(callback())
 	local effect = Instance.new("Frame",Button)
 	local EffectCorner = Instance.new("UICorner",effect)
 	EffectCorner.CornerRadius = UDim.new(0, 100)
@@ -739,12 +739,13 @@ UICorner_2.CornerRadius = UDim.new(0, 100)
 	local Toggled = false
 	
 	TextButton.MouseButton1Click:Connect(function()
+        spawn(function() callback(Toggled) end)
 		if not Toggled then
-			Toggled = true ; callback(Toggled)
+			Toggled = true
 			InnerCircle:TweenSize(UDim2.new(0,8,0,8),"Out","Sine",0.05,true,nil)
 			TweenColor(Stroke,75, 129, 255,0.05 )
 		else
-			Toggled = false ; callback(Toggled)
+			Toggled = false 
 			InnerCircle:TweenSize(UDim2.new(0,0,0,0),"In","Sine",0.05,true,nil)
 			TweenColor(Stroke,154,154,154,0.05 )
 		end
