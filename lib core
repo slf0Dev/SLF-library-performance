@@ -300,15 +300,16 @@ MainTitle.TextSize = 20.000
 MainTitle.TextXAlignment = Enum.TextXAlignment.Left
 MainTitle.Text = Title
 
+local Hided = true
 
 UserInputService.InputBegan:Connect(function(key,isTyping)
         if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
             if Hided then
                 Hided = false
-                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0,0,-2),"Out","Quad",0.15)
+                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0,-2,0),"Out","Quad",0.15)
             else
                 Hided = true
-                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0.Position.X,0,-2),"Out","Quad",0.15)
+                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0,0.03,0),"Out","Quad",0.15)
 
             end
         end
