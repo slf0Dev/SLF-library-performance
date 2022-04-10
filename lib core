@@ -221,6 +221,7 @@ UIListLayout.Padding = UDim.new(0, -1)
 local IsScrolledMain = false
 local FoldersSize = 0
 
+
 lib.Name = "lib"
 lib.Parent = game.CoreGui
 lib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -229,9 +230,11 @@ Topbar.Name = "Topbar"
 Topbar.Parent = lib
 Topbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 Topbar.BorderSizePixel = 0
+local pos_x
 for i,v in next,WindowsAlignment do
 	if i == ThatWindow then
 	Topbar.Position = UDim2.new(v, 0, 0.03, 0)
+	pos_x = v
 	end
 end
 Topbar.Size = UDim2.new(0, 242, 0, 40)
@@ -306,10 +309,10 @@ UserInputService.InputBegan:Connect(function(key,isTyping)
         if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
             if Hided then
                 Hided = false
-                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0,-2,0),"Out","Quad",0.15)
+                Topbar:TweenPosition(UDim2.new(pos_x,0,-1,0),"In","Quint",0.5,true,nil)
             else
                 Hided = true
-                Topbar:TweenPosition(UDim2.new(Topbar.Position.X,0,0.03,0),"Out","Quad",0.15)
+                Topbar:TweenPosition(UDim2.new(pos_x,0,0.03,0),"Out","Quint",1,true,nil)
 
             end
         end
