@@ -751,15 +751,18 @@ InnerCircle.AnchorPoint = Vector2.new(0.5, 0.5)
 InnerCircle.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
 InnerCircle.BorderSizePixel = 0
 InnerCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
-if IsTogle then
-InnerCircle.Size = UDim2.new(0,8,0,8)
-Stroke.Color = Color3.fromRGB(75, 129, 255)
-end
+
 
 UICorner_2.CornerRadius = UDim.new(0, 100)
 	UICorner_2.Parent = InnerCircle
 	
 	local Toggled = IsTogle
+	
+	if IsTogle then
+	InnerCircle.Size = UDim2.new(0,8,0,8)
+	Stroke.Color = Color3.fromRGB(75, 129, 255)
+	spawn(function() callback(Toggled) end)
+	end
 	
 	TextButton.MouseButton1Click:Connect(function()
         spawn(function() callback(Toggled) end)
