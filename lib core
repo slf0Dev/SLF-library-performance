@@ -415,6 +415,7 @@ Components.BorderSizePixel = 0
 Components.Position = UDim2.new(0, 0, 1, -1)
 Components.Size = UDim2.new(0, 242, 0, 0)
 Components.ClipsDescendants = true
+Components.AutomaticSize = Enum.AutomaticSize.Y
 
 UIListLayout.Parent = Components
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -442,12 +443,12 @@ if not IsScrolled then
 	IsScrolled = true
 TweenObjects(ScrollFolderButton,180,0.3)
 
-Components:TweenSize(UDim2.new(0,242,0,FolderSize - 40),"In","Sine",0.3,true,nil)
-Folder1:TweenSize(UDim2.new(0,242,0,FolderSize),"In","Sine",0.3,true,nil)
+Components.AutomaticSize = Enum.AutomaticSize.Y
+Folder1:TweenSize(UDim2.new(Components.Size + 40),"In","Sine",0.3,true,nil)
 else
 IsScrolled = false
 	TweenObjects(ScrollFolderButton,0,0.3)
-	Components:TweenSize(UDim2.new(0,242,0,0),"Out","Sine",0.3,true,nil)
+	Components.AutomaticSize = Enum.AutomaticSize.None
 	Folder1:TweenSize(UDim2.new(0,242,0,40),"Out","Sine",0.3,true,nil)
 
 end
