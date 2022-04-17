@@ -3,38 +3,38 @@ local ms = game.Players.LocalPlayer:GetMouse()
 local TweenService = game:GetService("TweenService")
 
 local function TweenObjects(Object,ABC,Delay)
-    local ToTween = Object
-    local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Quart,Enum.EasingDirection.InOut,0,false,0)
-    local Tweener = TweenService:Create(ToTween,tweenInfo,{Rotation = ABC})
-    Tweener:Play()
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Quart,Enum.EasingDirection.InOut,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{Rotation = ABC})
+	Tweener:Play()
 end
 
 local function Tweensize(Object,ABC,Delay)
-    local ToTween = Object
-    local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Quart,Enum.EasingDirection.InOut,0,false,0)
-    local Tweener = TweenService:Create(ToTween,tweenInfo,{Scale = ABC})
-    Tweener:Play()
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Quart,Enum.EasingDirection.InOut,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{Scale = ABC})
+	Tweener:Play()
 end
 
 local function TweenFade(Object,ABC,Delay)
-    local ToTween = Object
-    local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
-    local Tweener = TweenService:Create(ToTween,tweenInfo,{BackgroundTransparency = ABC})
-    Tweener:Play()
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{BackgroundTransparency = ABC})
+	Tweener:Play()
 end
 
 local function TweenColor(Object,R,G,B,Delay)
-    local ToTween = Object
-    local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
-    local Tweener = TweenService:Create(ToTween,tweenInfo,{Color = Color3.fromRGB(R,G,B)})
-    Tweener:Play()
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{Color = Color3.fromRGB(R,G,B)})
+	Tweener:Play()
 end
 
 local WindowsAlignment = {
-[1] = 0.1,
-[2] = 0.3,
-[3] = 0.5,
-[4] = 0.7
+	[1] = 0.1,
+	[2] = 0.3,
+	[3] = 0.5,
+	[4] = 0.7
 }
 
 local Windows = 0
@@ -42,15 +42,15 @@ local Windows = 0
 local Library = {}
 
 LibraryOptions = {
-["Scale"] = 0.9
+	["Scale"] = 0.9
 }
 
 pcall(function()
-for i,v in next,game.CoreGui:GetChildren() do
-	if v.Name == "lib" then
-	v:Destroy()
-end
-end
+	for i,v in next,game.CoreGui:GetChildren() do
+		if v.Name == "lib" then
+			v:Destroy()
+		end
+	end
 end)
 
 --//loader code
@@ -58,743 +58,743 @@ local isLoaderEnded = false
 function Library:Loader(HubText,CreditsText,CommentText)
 
 
-local Loader = Instance.new("ScreenGui")
-local Zone = Instance.new("Frame")
-local Main = Instance.new("Frame")
-local UIGradient = Instance.new("UIGradient")
-local HubName = Instance.new("TextLabel")
-local UIGradient_2 = Instance.new("UIGradient")
-local Credits = Instance.new("TextLabel")
-local UIGradient_3 = Instance.new("UIGradient")
-local welcomeLabel = Instance.new("TextLabel")
-local UIGradient_4 = Instance.new("UIGradient")
-local Backgroundimg = Instance.new("ImageLabel")
-local UICorner = Instance.new("UICorner")
-local LogoImage = Instance.new("ImageLabel")
-local UICorner_2 = Instance.new("UICorner")
+	local Loader = Instance.new("ScreenGui")
+	local Zone = Instance.new("Frame")
+	local Main = Instance.new("Frame")
+	local UIGradient = Instance.new("UIGradient")
+	local HubName = Instance.new("TextLabel")
+	local UIGradient_2 = Instance.new("UIGradient")
+	local Credits = Instance.new("TextLabel")
+	local UIGradient_3 = Instance.new("UIGradient")
+	local welcomeLabel = Instance.new("TextLabel")
+	local UIGradient_4 = Instance.new("UIGradient")
+	local Backgroundimg = Instance.new("ImageLabel")
+	local UICorner = Instance.new("UICorner")
+	local LogoImage = Instance.new("ImageLabel")
+	local UICorner_2 = Instance.new("UICorner")
 
 
 
-Loader.Name = "Loader"
-Loader.Parent = game.CoreGui
-Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Loader.Name = "Loader"
+	Loader.Parent = game.CoreGui
+	Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Zone.Name = "Zone"
-Zone.Parent = Loader
-Zone.AnchorPoint = Vector2.new(0.5, 0.5)
-Zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Zone.BackgroundTransparency = 1.000
-Zone.BorderSizePixel = 0
-Zone.ClipsDescendants = true
-Zone.Position = UDim2.new(0.5, 0, 0.5, 0)
-Zone.Size = UDim2.new(0, 550, 0, 350)
+	Zone.Name = "Zone"
+	Zone.Parent = Loader
+	Zone.AnchorPoint = Vector2.new(0.5, 0.5)
+	Zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Zone.BackgroundTransparency = 1.000
+	Zone.BorderSizePixel = 0
+	Zone.ClipsDescendants = true
+	Zone.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Zone.Size = UDim2.new(0, 550, 0, 350)
 
-Main.Name = "Main"
-Main.Parent = Zone
-Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BorderSizePixel = 0
-Main.ClipsDescendants = true
-Main.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main.Size = UDim2.new(0, 0, 0, 0)
+	Main.Name = "Main"
+	Main.Parent = Zone
+	Main.AnchorPoint = Vector2.new(0.5, 0.5)
+	Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Main.BorderSizePixel = 0
+	Main.ClipsDescendants = true
+	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Main.Size = UDim2.new(0, 0, 0, 0)
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
-UIGradient.Parent = Main
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
+	UIGradient.Parent = Main
 
-HubName.Name = "HubName"
-HubName.Parent = Main
-HubName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HubName.BackgroundTransparency = 1.000
-HubName.BorderSizePixel = 0
-HubName.Position = UDim2.new(0.0345454589, 0, 0.0457142964, 0)
-HubName.Size = UDim2.new(0, 183, 0, 47)
-HubName.Font = Enum.Font.Kalam
-HubName.Text = HubText
-HubName.TextColor3 = Color3.fromRGB(145, 145, 145)
-HubName.TextSize = 50.000
-HubName.TextXAlignment = Enum.TextXAlignment.Left
+	HubName.Name = "HubName"
+	HubName.Parent = Main
+	HubName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	HubName.BackgroundTransparency = 1.000
+	HubName.BorderSizePixel = 0
+	HubName.Position = UDim2.new(0.0345454589, 0, 0.0457142964, 0)
+	HubName.Size = UDim2.new(0, 183, 0, 47)
+	HubName.Font = Enum.Font.Kalam
+	HubName.Text = HubText
+	HubName.TextColor3 = Color3.fromRGB(145, 145, 145)
+	HubName.TextSize = 50.000
+	HubName.TextXAlignment = Enum.TextXAlignment.Left
 
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
-UIGradient_2.Parent = HubName
+	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
+	UIGradient_2.Parent = HubName
 
-Credits.Name = "Credits"
-Credits.Parent = Main
-Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Credits.BackgroundTransparency = 1.000
-Credits.BorderSizePixel = 0
-Credits.Position = UDim2.new(0.0345454551, 0, 0.151428565, 0)
-Credits.Size = UDim2.new(0, 503, 0, 47)
-Credits.Font = Enum.Font.Kalam
-Credits.Text = CreditsText
-Credits.TextColor3 = Color3.fromRGB(109, 109, 109)
-Credits.TextSize = 21.000
-Credits.TextXAlignment = Enum.TextXAlignment.Left
+	Credits.Name = "Credits"
+	Credits.Parent = Main
+	Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Credits.BackgroundTransparency = 1.000
+	Credits.BorderSizePixel = 0
+	Credits.Position = UDim2.new(0.0345454551, 0, 0.151428565, 0)
+	Credits.Size = UDim2.new(0, 503, 0, 47)
+	Credits.Font = Enum.Font.Kalam
+	Credits.Text = CreditsText
+	Credits.TextColor3 = Color3.fromRGB(109, 109, 109)
+	Credits.TextSize = 21.000
+	Credits.TextXAlignment = Enum.TextXAlignment.Left
 
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
-UIGradient_3.Parent = Credits
+	UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
+	UIGradient_3.Parent = Credits
 
-welcomeLabel.Name = "welcomeLabel"
-welcomeLabel.Parent = Main
-welcomeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-welcomeLabel.BackgroundTransparency = 1.000
-welcomeLabel.BorderSizePixel = 0
-welcomeLabel.Position = UDim2.new(0.367272735, 0, 0.788571417, 0)
-welcomeLabel.Size = UDim2.new(0, 152, 0, 68)
-welcomeLabel.Font = Enum.Font.Kalam
-welcomeLabel.Text = CommentText
-welcomeLabel.TextColor3 = Color3.fromRGB(115, 115, 115)
-welcomeLabel.TextSize = 50.000
+	welcomeLabel.Name = "welcomeLabel"
+	welcomeLabel.Parent = Main
+	welcomeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	welcomeLabel.BackgroundTransparency = 1.000
+	welcomeLabel.BorderSizePixel = 0
+	welcomeLabel.Position = UDim2.new(0.367272735, 0, 0.788571417, 0)
+	welcomeLabel.Size = UDim2.new(0, 152, 0, 68)
+	welcomeLabel.Font = Enum.Font.Kalam
+	welcomeLabel.Text = CommentText
+	welcomeLabel.TextColor3 = Color3.fromRGB(115, 115, 115)
+	welcomeLabel.TextSize = 50.000
 
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
-UIGradient_4.Parent = welcomeLabel
+	UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(211, 255, 198))}
+	UIGradient_4.Parent = welcomeLabel
 
-Backgroundimg.Name = "Backgroundimg"
-Backgroundimg.Parent = Main
-Backgroundimg.AnchorPoint = Vector2.new(0.5, 0.5)
-Backgroundimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Backgroundimg.BackgroundTransparency = 1.000
-Backgroundimg.BorderSizePixel = 0
-Backgroundimg.Position = UDim2.new(0.5, 0, 0.49999997, 0)
-Backgroundimg.Size = UDim2.new(1, 0, 1, 0)
-Backgroundimg.Image = "http://www.roblox.com/asset/?id=1771082037"
-Backgroundimg.ImageTransparency = 0.870
+	Backgroundimg.Name = "Backgroundimg"
+	Backgroundimg.Parent = Main
+	Backgroundimg.AnchorPoint = Vector2.new(0.5, 0.5)
+	Backgroundimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Backgroundimg.BackgroundTransparency = 1.000
+	Backgroundimg.BorderSizePixel = 0
+	Backgroundimg.Position = UDim2.new(0.5, 0, 0.49999997, 0)
+	Backgroundimg.Size = UDim2.new(1, 0, 1, 0)
+	Backgroundimg.Image = "http://www.roblox.com/asset/?id=1771082037"
+	Backgroundimg.ImageTransparency = 0.870
 
-UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = Backgroundimg
+	UICorner.CornerRadius = UDim.new(0, 10)
+	UICorner.Parent = Backgroundimg
 
-LogoImage.Name = "LogoImage"
-LogoImage.Parent = Main
-LogoImage.AnchorPoint = Vector2.new(0.5, 0.5)
-LogoImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LogoImage.BackgroundTransparency = 1.000
-LogoImage.BorderSizePixel = 0
-LogoImage.Position = UDim2.new(0.405999988, 0, 0, 35)
-LogoImage.Size = UDim2.new(0.0781818405, 0, 0.122857153, 0)
-LogoImage.Image = "http://www.roblox.com/asset/?id=9287155123"
-LogoImage.ImageColor3 = Color3.fromRGB(167, 255, 208)
-LogoImage.ScaleType = Enum.ScaleType.Fit
+	LogoImage.Name = "LogoImage"
+	LogoImage.Parent = Main
+	LogoImage.AnchorPoint = Vector2.new(0.5, 0.5)
+	LogoImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LogoImage.BackgroundTransparency = 1.000
+	LogoImage.BorderSizePixel = 0
+	LogoImage.Position = UDim2.new(0.405999988, 0, 0, 35)
+	LogoImage.Size = UDim2.new(0.0781818405, 0, 0.122857153, 0)
+	LogoImage.Image = "http://www.roblox.com/asset/?id=9287155123"
+	LogoImage.ImageColor3 = Color3.fromRGB(167, 255, 208)
+	LogoImage.ScaleType = Enum.ScaleType.Fit
 
-UICorner_2.CornerRadius = UDim.new(0, 10)
-UICorner_2.Parent = Main
+	UICorner_2.CornerRadius = UDim.new(0, 10)
+	UICorner_2.Parent = Main
 
 
---//adding blur effect
+	--//adding blur effect
 
-local Blur = Instance.new("BlurEffect");
-Blur.Parent = game:GetService("Lighting");
-Blur.Size = 0
+	local Blur = Instance.new("BlurEffect");
+	Blur.Parent = game:GetService("Lighting");
+	Blur.Size = 0
 
---//animations
+	--//animations
 
-spawn(function()
-        repeat wait() until game:IsLoaded();
-	Main:TweenSize(UDim2.new(1,0,1,0),"Out","Quart",0.4,true,nil);
-	TweenService:Create(Blur,TweenInfo.new(.4),{Size = 24}):Play();
-	wait(2.5)
-	Main:TweenSize(UDim2.new(0,0,0,0),"In","Quart",0.4,true,nil);
-	TweenService:Create(Blur,TweenInfo.new(.4),{Size = 0}):Play();
-	wait(0.6)
-	Loader:Destroy() ; Blur:Destroy() ;
-	isLoaderEnded = true
+	spawn(function()
+		repeat wait() until game:IsLoaded();
+		Main:TweenSize(UDim2.new(1,0,1,0),"Out","Quart",0.4,true,nil);
+		TweenService:Create(Blur,TweenInfo.new(.4),{Size = 24}):Play();
+		wait(2.5)
+		Main:TweenSize(UDim2.new(0,0,0,0),"In","Quart",0.4,true,nil);
+		TweenService:Create(Blur,TweenInfo.new(.4),{Size = 0}):Play();
+		wait(0.6)
+		Loader:Destroy() ; Blur:Destroy() ;
+		isLoaderEnded = true
 	end)
 end
 
 function Library:Window(Title,keycode)
-local foldersCount = 0
-local Window = {}
-Windows += 1
-local ThatWindow = Windows
-local lib = Instance.new("ScreenGui")
-local Topbar = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local bb = Instance.new("Frame")
-local ScrollMainButton = Instance.new("ImageButton")
-local Folders = Instance.new("Frame")
-local MainTitle = Instance.new("TextLabel")
+	local foldersCount = 0
+	local Window = {}
+	Windows += 1
+	local ThatWindow = Windows
+	local lib = Instance.new("ScreenGui")
+	local Topbar = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local bb = Instance.new("Frame")
+	local ScrollMainButton = Instance.new("ImageButton")
+	local Folders = Instance.new("Frame")
+	local MainTitle = Instance.new("TextLabel")
 
-local UIListLayout = Instance.new("UIListLayout")
-UIListLayout.Parent = Folders
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, -1)
-
-
-local IsScrolledMain = false
-local FoldersSize = 0
+	local UIListLayout = Instance.new("UIListLayout")
+	UIListLayout.Parent = Folders
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, -1)
 
 
-lib.Name = "lib"
-lib.Parent = game.CoreGui
-lib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Topbar.Name = "Topbar"
-Topbar.Parent = lib
-Topbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-Topbar.BorderSizePixel = 0
-local pos_x
-for i,v in next,WindowsAlignment do
-	if i == ThatWindow then
-	Topbar.Position = UDim2.new(v, 0, 0.03, 0)
-	pos_x = v
-	end
-end
-Topbar.Size = UDim2.new(0, 242, 0, 40)
-
-local point = Instance.new("Frame",Topbar)
-point.AnchorPoint = Vector2.new(0.5,0.5)
-point.Position = UDim2.new(0.5,0,0.5,0)
-point.BorderSizePixel = 0
-point.BackgroundTransparency = 1
-point.Size = UDim2.new(0,40,0,40)
-UICorner.Parent = Topbar
-
-bb.Name = "bb"
-bb.Parent = Topbar
-bb.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-bb.BorderSizePixel = 0
-bb.Position = UDim2.new(0, 0, 0.649999976, -1)
-bb.Size = UDim2.new(0, 242, 0, 15)
-
-ScrollMainButton.Name = "ScrollMainButton"
-ScrollMainButton.Parent = Topbar
-ScrollMainButton.BackgroundTransparency = 1.000
-ScrollMainButton.Position = UDim2.new(0.833354354, 0, 0, 0)
-ScrollMainButton.Size = UDim2.new(0, 40, 0, 40)
-ScrollMainButton.ZIndex = 2
-ScrollMainButton.Image = "rbxassetid://3926307971"
-ScrollMainButton.ImageColor3 = Color3.fromRGB(107, 107, 107)
-ScrollMainButton.ImageRectOffset = Vector2.new(324, 524)
-ScrollMainButton.ImageRectSize = Vector2.new(36, 36)
-ScrollMainButton.Rotation = 180
-ScrollMainButton.MouseButton1Click:connect(function()
-if not IsScrolledMain then
-	IsScrolledMain = true
-TweenObjects(ScrollMainButton,180,0.3)
-
-Folders:TweenSize(UDim2.new(0,242,0,FoldersSize),"In","Sine",0.3,true,nil)
-
-else
-IsScrolledMain = false
-	TweenObjects(ScrollMainButton,0,0.3)
-	Folders:TweenSize(UDim2.new(0,242,0,0),"Out","Sine",0.3,true,nil)
-
-end
-end)
-
-Folders.Name = "Folders"
-Folders.Parent = Topbar
-Folders.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-Folders.BackgroundTransparency = 1
-Folders.BorderSizePixel = 0
-Folders.Position = UDim2.new(0, 0, 1, -1)
-Folders.ClipsDescendants = true
-Folders.Size = UDim2.new(0,242,0,0)
+	local IsScrolledMain = false
+	local FoldersSize = 0
 
 
-MainTitle.Name = "MainTitle"
-MainTitle.Parent = Topbar
-MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainTitle.BackgroundTransparency = 1.000
-MainTitle.BorderSizePixel = 0
-MainTitle.Position = UDim2.new(0.0495867766, 0, 0, 0)
-MainTitle.Size = UDim2.new(0, 189, 0, 38)
-MainTitle.Font = Enum.Font.SourceSansBold
-MainTitle.TextColor3 = Color3.fromRGB(132, 132, 132)
-MainTitle.TextSize = 20.000
-MainTitle.TextXAlignment = Enum.TextXAlignment.Left
-MainTitle.Text = Title
+	lib.Name = "lib"
+	lib.Parent = game.CoreGui
+	lib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local Hided = true
-
-UserInputService.InputBegan:Connect(function(key,isTyping)
-        if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
-            if Hided then
-                Hided = false
-                Topbar:TweenPosition(UDim2.new(pos_x,0,-1,0),"In","Quint",0.5,true,nil)
-            else
-                Hided = true
-                Topbar:TweenPosition(UDim2.new(pos_x,0,0.03,0),"Out","Quint",1,true,nil)
-
-            end
-        end
-    end)
-
-
-local UIScale = Instance.new("UIScale",lib)
-UIScale.Scale = LibraryOptions["Scale"]
-
-local SavedScale = LibraryOptions["Scale"] or 1
- local dragging
-    local dragInput
-    local dragStart
-    local startPos
-    local off = Vector3.new(0,0,0)
-        local speed = 5
-		local k = 0.04
-
-
-    local function update(input)
-        local delta = input.Position - dragStart
-		pcall(function()
-        Topbar:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y),"Out","Quad",0.1,true,nil)
-end)
-    local position = Vector2.new(ms.X,ms.Y)
-    local force = position - point.AbsolutePosition
-    local mag = force.Magnitude - 1
-    force = force.Unit
-    force *= -1 * k * mag
-    local formula = speed * force --* delta
-TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = formula.X}):Play()
-
-end
-    Topbar.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            dragging = true
-            dragStart = input.Position
-            startPos = Topbar.Position
-			Folders.Visible = false
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false
-						TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = 0}):Play()
-                repeat wait() until Topbar.Rotation == 0
-									Folders.Visible = true
-				end
-            end)
-        end
-    end)
-        
-    Topbar.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-            dragInput = input
-			
-        end
-    end)
-        
-    UserInputService.InputChanged:Connect(function(input)
-        if input == dragInput and dragging then
-            update(input)
-        end
-    end)
-
-
-function Window:Folder(Title)
-local Folder1 = Instance.new("Frame")
-local Header = Instance.new("Frame")
-local Components = Instance.new("Frame")
-local UIListLayout = Instance.new("UIListLayout")
-local Skip = Instance.new("Frame")
-local ScrollFolderButton = Instance.new("ImageButton")
-local FolderTitle = Instance.new("TextLabel")
-local IsScrolled = false
-local FolderSize = 40
-FoldersSize += 80
-local InsideFolder = {}
-foldersCount += 1
-local FolderNum = foldersCount
-Folder1.Name = "foolder"..tostring(FolderNum)
-
-
-
-
-Folder1.Parent = Folders
-Folder1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-Folder1.BackgroundTransparency = 1.000
-Folder1.BorderSizePixel = 0
-Folder1.Size = UDim2.new(0, 242, 0, 40)
-
-Header.Name = "Header"
-Header.Parent = Folder1
-Header.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-Header.BorderSizePixel = 0
-Header.Size = UDim2.new(0, 242, 0, 40)
-
-Components.Name = "Components"
-Components.Parent = Header
-Components.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-Components.BorderSizePixel = 0
-Components.Position = UDim2.new(0, 0, 1, -1)
-Components.Size = UDim2.new(0, 242, 0, 0)
-Components.ClipsDescendants = true
-Components.AutomaticSize = Enum.AutomaticSize.Y
-
-UIListLayout.Parent = Components
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 5)
-UIListLayout.HorizontalAlignment = "Center"
-
-Skip.Name = "Skip"
-Skip.Parent = Components
-Skip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Skip.BackgroundTransparency = 1.000
-Skip.BorderSizePixel = 0
-
-ScrollFolderButton.Name = "ScrollFolderButton"
-ScrollFolderButton.Parent = Header
-ScrollFolderButton.BackgroundTransparency = 1.000
-ScrollFolderButton.Position = UDim2.new(0.833354354, 0, 0, 0)
-ScrollFolderButton.Size = UDim2.new(0, 40, 0, 40)
-ScrollFolderButton.ZIndex = 2
-ScrollFolderButton.Image = "rbxassetid://3926307971"
-ScrollFolderButton.ImageColor3 = Color3.fromRGB(107, 107, 107)
-ScrollFolderButton.ImageRectOffset = Vector2.new(324, 524)
-ScrollFolderButton.ImageRectSize = Vector2.new(36, 36)
-ScrollFolderButton.MouseButton1Click:connect(function()
-if not IsScrolled then
-	IsScrolled = true
-TweenObjects(ScrollFolderButton,180,0.3)
-
-Components.AutomaticSize = Enum.AutomaticSize.Y
-Folder1:TweenSize(UDim2.new(Components.Size + 40),"In","Sine",0.3,true,nil)
-else
-IsScrolled = false
-	TweenObjects(ScrollFolderButton,0,0.3)
-	Components.AutomaticSize = Enum.AutomaticSize.None
-	Folder1:TweenSize(UDim2.new(0,242,0,40),"Out","Sine",0.3,true,nil)
-
-end
-end)
-
-FolderTitle.Name = "FolderTitle"
-FolderTitle.Parent = Header
-FolderTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FolderTitle.BackgroundTransparency = 1.000
-FolderTitle.BorderSizePixel = 0
-FolderTitle.Position = UDim2.new(0.0495867766, 0, 0, 0)
-FolderTitle.Size = UDim2.new(0, 189, 0, 38)
-FolderTitle.Font = Enum.Font.SourceSansBold
-FolderTitle.TextColor3 = Color3.fromRGB(132, 132, 132)
-FolderTitle.TextSize = 20.000
-FolderTitle.TextXAlignment = Enum.TextXAlignment.Left
-FolderTitle.Text = Title
-
-function InsideFolder:Label(Text)
-FolderSize += 45.5
-FoldersSize += 45.5
-local Label = Instance.new("TextLabel")
-Label.Name = "Label"
-Label.Parent = Components
-Label.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Label.BackgroundTransparency = 1
-Label.BorderSizePixel = 0
-Label.Position = UDim2.new(0.0495867766, 0, 0, 0)
-Label.Size = UDim2.new(0, 242, 0, 35)
-Label.Font = Enum.Font.SourceSansBold
-Label.TextColor3 = Color3.fromRGB(132, 132, 132)
-Label.TextSize = 20.000
-Label.Text = Text
-
-
-
-
-return Label;
-end
-function InsideFolder:Slider(Text,min,max,callback)
-	local Sliding = false
-	local Dragging = false
--- Instances:
-FolderSize += 45.5
-FoldersSize += 45.5
-
-
-local Slider = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local SliderBase = Instance.new("Frame")
-local Circle = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local BigCircle = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local Progress = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-
---Properties:
-
-Slider.Name = "Slider"
-Slider.Parent = Components
-Slider.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Slider.BackgroundTransparency = 1
-Slider.BorderSizePixel = 0
-Slider.Position = UDim2.new(0.0495867766, 0, 0, 0)
-Slider.Size = UDim2.new(0, 235, 0, 40)
-Slider.Font = Enum.Font.SourceSansBold
-Slider.Text = "   "..Text
-Slider.TextColor3 = Color3.fromRGB(132, 132, 132)
-Slider.TextSize = 15.000
-Slider.TextXAlignment = Enum.TextXAlignment.Left
-Slider.TextYAlignment = Enum.TextYAlignment.Top
-
-UICorner.Parent = Slider
-
-SliderBase.Name = "SliderBase"
-SliderBase.Parent = Slider
-SliderBase.AnchorPoint = Vector2.new(0.5, 0.5)
-SliderBase.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
-SliderBase.BorderSizePixel = 0
-SliderBase.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-SliderBase.Size = UDim2.new(0, 210, 0, 3)
-
-Circle.Name = "Circle"
-Circle.Parent = SliderBase
-Circle.AnchorPoint = Vector2.new(0, 0.5)
-Circle.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
-Circle.Position = UDim2.new(0, 0, 0.5, 0)
-Circle.Size = UDim2.new(0, 10, 0, 10)
-Circle.ZIndex = 3
-
-UICorner_2.CornerRadius = UDim.new(0, 100)
-UICorner_2.Parent = Circle
-
-BigCircle.Name = "BigCircle"
-BigCircle.Parent = Circle
-BigCircle.AnchorPoint = Vector2.new(0.5, 0.5)
-BigCircle.BackgroundColor3 = Color3.fromRGB(167, 198, 255)
-BigCircle.BackgroundTransparency = 1.000
-BigCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
-BigCircle.Size = UDim2.new(0, 18, 0, 18)
-BigCircle.ZIndex = 3
-
-UICorner_3.CornerRadius = UDim.new(0, 100)
-UICorner_3.Parent = BigCircle
-
-local smh = Instance.new("Frame",SliderBase)
-smh.BackgroundTransparency = 1
-smh.BorderSizePixel = 0
-smh.ClipsDescendants = true
-smh.AnchorPoint = Vector2.new(0.5, 0.5)
-smh.Position = UDim2.new(0.5, 0, 0.7, -1)
-smh.Size = UDim2.new(0, 210, 0, 4)
-smh.ZIndex = 2
-
-Progress.Name = "Progress"
-Progress.Parent = smh
-Progress.AnchorPoint = Vector2.new(0, 0.5)
-Progress.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
-Progress.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Progress.BorderSizePixel = 0
-Progress.Position = UDim2.new(0, 0, 0.5, 0)
-Progress.Size = UDim2.new(0, 0, 0, 3)
-Progress.ZIndex = 2
-
-TextLabel.Parent = Slider
-TextLabel.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-TextLabel.BackgroundTransparency = 1
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.838297904, 0, 0.0874999985, 10)
-TextLabel.Size = UDim2.new(0, 35, 0, 19)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "10"
-TextLabel.TextColor3 = Color3.fromRGB(158, 158, 158)
-TextLabel.TextSize = 16.000
-	
-UICorner_4.Parent = TextLabel
-
-	local Blocked = false
-
-	Slider.MouseEnter:connect(function()
-		for _ = 1,10 do wait()
-BigCircle.BackgroundTransparency -= 0.025
-	end
-	end)
-
-		Slider.MouseLeave:connect(function()
-		for _ = 1,10 do wait()
-BigCircle.BackgroundTransparency += 0.025
-			end
-	end)
-
-	local function move(Pressed)
-		Sliding = true;
-		local pos = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), -6, 0, 0)
-		local size = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 3), 0, 3, 0)
-		Circle:TweenPosition(pos, "Out", "Sine", 0.1, true);
-		Progress:TweenSize(size, "Out", "Sine", 0.1, true);
-		local value = math.floor(((pos.X.Scale * max) / max) * (max - min) + min)
-		TextLabel.Text = tostring(value);
-		callback(tostring(value))
-	end
-
-	Slider.InputBegan:Connect(function(Pressed)
-		if Pressed.UserInputType == Enum.UserInputType.MouseButton1 then
-			Dragging = true
-			Sliding = false 
-			move(Pressed)
+	Topbar.Name = "Topbar"
+	Topbar.Parent = lib
+	Topbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	Topbar.BorderSizePixel = 0
+	local pos_x
+	for i,v in next,WindowsAlignment do
+		if i == ThatWindow then
+			Topbar.Position = UDim2.new(v, 0, 0.03, 0)
+			pos_x = v
 		end
-	end)
-
-	Slider.InputEnded:Connect(function(Pressed)
-		if Pressed.UserInputType == Enum.UserInputType.MouseButton1 then
-			Dragging = false
-			Sliding = false
-			move(Pressed)
-		end
-	end)
-
-	game:GetService("UserInputService").InputChanged:Connect(function(Pressed)
-		if Dragging and Pressed.UserInputType == Enum.UserInputType.MouseMovement then
-			move(Pressed)
-		end
-	end)
-
-end
-
-function InsideFolder:Button(Text,callback)
-
-local Button = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local ButtonText = Instance.new("TextLabel")
-local UIGradient = Instance.new("UIGradient")
-
-FolderSize += 45.5
-FoldersSize += 45.5
-
-
-Button.Name = "Button"
-Button.Parent = Components
-Button.BackgroundColor3 = Color3.fromRGB(186, 186, 186)
-Button.BorderSizePixel = 0
-Button.Size = UDim2.new(0, 235, 0, 40)
-Button.AutoButtonColor = false
-Button.Font = Enum.Font.SourceSansBold
-Button.Text = ""
-Button.TextColor3 = Color3.fromRGB(168, 168, 168)
-Button.TextSize = 20.000
-Button.ClipsDescendants = true
-
-UICorner.Parent = Button
-
-ButtonText.Name = "ButtonText"
-ButtonText.Parent = Button
-ButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ButtonText.BackgroundTransparency = 1.000
-ButtonText.BorderSizePixel = 0
-ButtonText.Size = UDim2.new(0, 235, 0, 40)
-ButtonText.Font = Enum.Font.SourceSansBold
-ButtonText.TextColor3 = Color3.fromRGB(189, 189, 189)
-ButtonText.TextSize = 20.000
-ButtonText.Text = Text
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(75, 129, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(111, 145, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(75, 129, 255))}
-UIGradient.Parent = Button
-
-	Button.MouseButton1Click:Connect(function()
-	spawn(callback())
-	local effect = Instance.new("Frame",Button)
-	local EffectCorner = Instance.new("UICorner",effect)
-	EffectCorner.CornerRadius = UDim.new(0, 100)
-	effect.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	effect.BackgroundTransparency = 0.6
-	effect.BorderSizePixel = 0
-	
-	local x, y = (ms.X - effect.AbsolutePosition.X), (ms.Y - effect.AbsolutePosition.Y)
-	effect.Position = UDim2.new(0, x, 0, y)
-	local len, size = 0.2, nil
-	if Button.AbsoluteSize.X >= Button.AbsoluteSize.Y then
-		size = (Button.AbsoluteSize.X * 1)
-	else
-		size = (Button.AbsoluteSize.Y * 3)
 	end
-	effect:TweenSizeAndPosition(UDim2.new(0.95, 0, 9, 0), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', 0.3, true, nil)
+	Topbar.Size = UDim2.new(0, 242, 0, 40)
 
-	TweenFade(effect,1,0.3)
-wait(0.35)
+	local point = Instance.new("Frame",Topbar)
+	point.AnchorPoint = Vector2.new(0.5,0.5)
+	point.Position = UDim2.new(0.5,0,0.5,0)
+	point.BorderSizePixel = 0
+	point.BackgroundTransparency = 1
+	point.Size = UDim2.new(0,40,0,40)
+	UICorner.Parent = Topbar
 
-	effect:Destroy()
-	
-	end)
-	return Button;
-	end
-	function InsideFolder:Toggle(Text,callback,IsTogle)
+	bb.Name = "bb"
+	bb.Parent = Topbar
+	bb.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	bb.BorderSizePixel = 0
+	bb.Position = UDim2.new(0, 0, 0.649999976, -1)
+	bb.Size = UDim2.new(0, 242, 0, 15)
 
-FolderSize += 45.5
-FoldersSize += 45.5
-local TextButton = Instance.new("TextButton")
-local StrokeCircle = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local InnerCircle = Instance.new("Frame")
-	local UICorner_2 = Instance.new("UICorner")
-	local Stroke = Instance.new("UIStroke",StrokeCircle)
-	
-	Stroke.LineJoinMode = "Round"
-	Stroke.Color = Color3.fromRGB(154,154,154)
---Properties:
+	ScrollMainButton.Name = "ScrollMainButton"
+	ScrollMainButton.Parent = Topbar
+	ScrollMainButton.BackgroundTransparency = 1.000
+	ScrollMainButton.Position = UDim2.new(0.833354354, 0, 0, 0)
+	ScrollMainButton.Size = UDim2.new(0, 40, 0, 40)
+	ScrollMainButton.ZIndex = 2
+	ScrollMainButton.Image = "rbxassetid://3926307971"
+	ScrollMainButton.ImageColor3 = Color3.fromRGB(107, 107, 107)
+	ScrollMainButton.ImageRectOffset = Vector2.new(324, 524)
+	ScrollMainButton.ImageRectSize = Vector2.new(36, 36)
+	ScrollMainButton.Rotation = 180
+	ScrollMainButton.MouseButton1Click:connect(function()
+		if not IsScrolledMain then
+			IsScrolledMain = true
+			TweenObjects(ScrollMainButton,180,0.3)
 
+			Folders:TweenSize(UDim2.new(0,242,0,FoldersSize),"In","Sine",0.3,true,nil)
 
-
-TextButton.Parent = Components
-TextButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-TextButton.BackgroundTransparency = 1
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.184, 0, 0.216999993, 0)
-TextButton.Size = UDim2.new(0, 240, 0, 40)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "   "..Text
-TextButton.TextColor3 = Color3.fromRGB(189, 189, 189)
-TextButton.TextSize = 18.000
-TextButton.TextXAlignment = Enum.TextXAlignment.Left
-TextButton.AutoButtonColor = false
-
-StrokeCircle.Name = "StrokeCircle"
-StrokeCircle.Parent = TextButton
-StrokeCircle.AnchorPoint = Vector2.new(0, 0.5)
-StrokeCircle.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
-StrokeCircle.BackgroundTransparency = 1.000
-StrokeCircle.BorderSizePixel = 0
-StrokeCircle.Position = UDim2.new(0.89, 0, 0.5, 0)
-StrokeCircle.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner.CornerRadius = UDim.new(0, 100)
-UICorner.Parent = StrokeCircle
-
-InnerCircle.Name = "InnerCircle"
-InnerCircle.Parent = StrokeCircle
-InnerCircle.AnchorPoint = Vector2.new(0.5, 0.5)
-InnerCircle.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
-InnerCircle.BorderSizePixel = 0
-InnerCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
-
-
-UICorner_2.CornerRadius = UDim.new(0, 100)
-	UICorner_2.Parent = InnerCircle
-	
-	local Toggled = IsTogle
-	
-	if IsTogle then
-	InnerCircle.Size = UDim2.new(0,8,0,8)
-	Stroke.Color = Color3.fromRGB(75, 129, 255)
-	spawn(function() callback(Toggled) end)
-	end
-	
-	TextButton.MouseButton1Click:Connect(function()
-        spawn(function() callback(Toggled) end)
-		if not Toggled then
-			Toggled = true
-			InnerCircle:TweenSize(UDim2.new(0,8,0,8),"Out","Sine",0.05,true,nil)
-			TweenColor(Stroke,75, 129, 255,0.05 )
 		else
-			Toggled = false 
-			InnerCircle:TweenSize(UDim2.new(0,0,0,0),"In","Sine",0.05,true,nil)
-			TweenColor(Stroke,154,154,154,0.05 )
+			IsScrolledMain = false
+			TweenObjects(ScrollMainButton,0,0.3)
+			Folders:TweenSize(UDim2.new(0,242,0,0),"Out","Sine",0.3,true,nil)
+
 		end
-		local Effect = Instance.new("Frame",StrokeCircle)
-	local EffectCorner = Instance.new("UICorner",Effect)
-	EffectCorner.CornerRadius = UDim.new(0, 100)
-	Effect.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
-	Effect.BackgroundTransparency = 0.3
-	Effect.BorderSizePixel = 0
-	Effect.Position = UDim2.new(0.5,0,0.5,0)
-	Effect.AnchorPoint = Vector2.new(0.5,0.5)
-
-Effect:TweenSize(UDim2.new(0,34,0,34),"Out","Sine",0.3,true,nil)
-TweenFade(Effect,1,0.4)
-repeat wait() until Effect.BackgroundTransparency == 1
-Effect:Destroy()
 	end)
-	return TextButton;
-	end
-return InsideFolder;
-end
 
-return Window;
+	Folders.Name = "Folders"
+	Folders.Parent = Topbar
+	Folders.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+	Folders.BackgroundTransparency = 1
+	Folders.BorderSizePixel = 0
+	Folders.Position = UDim2.new(0, 0, 1, -1)
+	Folders.ClipsDescendants = true
+	Folders.Size = UDim2.new(0,242,0,0)
+
+
+	MainTitle.Name = "MainTitle"
+	MainTitle.Parent = Topbar
+	MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MainTitle.BackgroundTransparency = 1.000
+	MainTitle.BorderSizePixel = 0
+	MainTitle.Position = UDim2.new(0.0495867766, 0, 0, 0)
+	MainTitle.Size = UDim2.new(0, 189, 0, 38)
+	MainTitle.Font = Enum.Font.SourceSansBold
+	MainTitle.TextColor3 = Color3.fromRGB(132, 132, 132)
+	MainTitle.TextSize = 20.000
+	MainTitle.TextXAlignment = Enum.TextXAlignment.Left
+	MainTitle.Text = Title
+
+	local Hided = true
+
+	UserInputService.InputBegan:Connect(function(key,isTyping)
+		if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
+			if Hided then
+				Hided = false
+				Topbar:TweenPosition(UDim2.new(pos_x,0,-1,0),"In","Quint",0.5,true,nil)
+			else
+				Hided = true
+				Topbar:TweenPosition(UDim2.new(pos_x,0,0.03,0),"Out","Quint",1,true,nil)
+
+			end
+		end
+	end)
+
+
+	local UIScale = Instance.new("UIScale",lib)
+	UIScale.Scale = LibraryOptions["Scale"]
+
+	local SavedScale = LibraryOptions["Scale"] or 1
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	local off = Vector3.new(0,0,0)
+	local speed = 5
+	local k = 0.04
+
+
+	local function update(input)
+		local delta = input.Position - dragStart
+		pcall(function()
+			Topbar:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y),"Out","Quad",0.1,true,nil)
+		end)
+		local position = Vector2.new(ms.X,ms.Y)
+		local force = position - point.AbsolutePosition
+		local mag = force.Magnitude - 1
+		force = force.Unit
+		force *= -1 * k * mag
+		local formula = speed * force --* delta
+		TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = formula.X}):Play()
+
+	end
+	Topbar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = Topbar.Position
+			Folders.Visible = false
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+					TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = 0}):Play()
+					repeat wait() until Topbar.Rotation == 0
+					Folders.Visible = true
+				end
+			end)
+		end
+	end)
+
+	Topbar.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+
+
+	function Window:Folder(Title)
+		local Folder1 = Instance.new("Frame")
+		local Header = Instance.new("Frame")
+		local Components = Instance.new("Frame")
+		local UIListLayout = Instance.new("UIListLayout")
+		local Skip = Instance.new("Frame")
+		local ScrollFolderButton = Instance.new("ImageButton")
+		local FolderTitle = Instance.new("TextLabel")
+		local IsScrolled = false
+		local FolderSize = 40
+		FoldersSize += 80
+		local InsideFolder = {}
+		foldersCount += 1
+		local FolderNum = foldersCount
+		Folder1.Name = "foolder"..tostring(FolderNum)
+
+
+
+
+		Folder1.Parent = Folders
+		Folder1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+		Folder1.BackgroundTransparency = 1.000
+		Folder1.BorderSizePixel = 0
+		Folder1.Size = UDim2.new(0, 242, 0, 40)
+
+		Header.Name = "Header"
+		Header.Parent = Folder1
+		Header.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+		Header.BorderSizePixel = 0
+		Header.Size = UDim2.new(0, 242, 0, 40)
+
+		Components.Name = "Components"
+		Components.Parent = Header
+		Components.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+		Components.BorderSizePixel = 0
+		Components.Position = UDim2.new(0, 0, 1, -1)
+		Components.Size = UDim2.new(0, 242, 0, 0)
+		Components.ClipsDescendants = true
+		Components.AutomaticSize = Enum.AutomaticSize.Y
+
+		UIListLayout.Parent = Components
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout.Padding = UDim.new(0, 5)
+		UIListLayout.HorizontalAlignment = "Center"
+
+		Skip.Name = "Skip"
+		Skip.Parent = Components
+		Skip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Skip.BackgroundTransparency = 1.000
+		Skip.BorderSizePixel = 0
+
+		ScrollFolderButton.Name = "ScrollFolderButton"
+		ScrollFolderButton.Parent = Header
+		ScrollFolderButton.BackgroundTransparency = 1.000
+		ScrollFolderButton.Position = UDim2.new(0.833354354, 0, 0, 0)
+		ScrollFolderButton.Size = UDim2.new(0, 40, 0, 40)
+		ScrollFolderButton.ZIndex = 2
+		ScrollFolderButton.Image = "rbxassetid://3926307971"
+		ScrollFolderButton.ImageColor3 = Color3.fromRGB(107, 107, 107)
+		ScrollFolderButton.ImageRectOffset = Vector2.new(324, 524)
+		ScrollFolderButton.ImageRectSize = Vector2.new(36, 36)
+		ScrollFolderButton.MouseButton1Click:connect(function()
+			if not IsScrolled then
+				IsScrolled = true
+				TweenObjects(ScrollFolderButton,180,0.3)
+
+				Components.AutomaticSize = Enum.AutomaticSize.Y
+				Folder1:TweenSize(UDim2.new(0,242,0,Components.Size.Y + 40),"In","Sine",0.3,true,nil)
+			else
+				IsScrolled = false
+				TweenObjects(ScrollFolderButton,0,0.3)
+				Components.AutomaticSize = Enum.AutomaticSize.None
+				Folder1:TweenSize(UDim2.new(0,242,0,40),"Out","Sine",0.3,true,nil)
+
+			end
+		end)
+
+		FolderTitle.Name = "FolderTitle"
+		FolderTitle.Parent = Header
+		FolderTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		FolderTitle.BackgroundTransparency = 1.000
+		FolderTitle.BorderSizePixel = 0
+		FolderTitle.Position = UDim2.new(0.0495867766, 0, 0, 0)
+		FolderTitle.Size = UDim2.new(0, 189, 0, 38)
+		FolderTitle.Font = Enum.Font.SourceSansBold
+		FolderTitle.TextColor3 = Color3.fromRGB(132, 132, 132)
+		FolderTitle.TextSize = 20.000
+		FolderTitle.TextXAlignment = Enum.TextXAlignment.Left
+		FolderTitle.Text = Title
+
+		function InsideFolder:Label(Text)
+			FolderSize += 45.5
+			FoldersSize += 45.5
+			local Label = Instance.new("TextLabel")
+			Label.Name = "Label"
+			Label.Parent = Components
+			Label.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+			Label.BackgroundTransparency = 1
+			Label.BorderSizePixel = 0
+			Label.Position = UDim2.new(0.0495867766, 0, 0, 0)
+			Label.Size = UDim2.new(0, 242, 0, 35)
+			Label.Font = Enum.Font.SourceSansBold
+			Label.TextColor3 = Color3.fromRGB(132, 132, 132)
+			Label.TextSize = 20.000
+			Label.Text = Text
+
+
+
+
+			return Label;
+		end
+		function InsideFolder:Slider(Text,min,max,callback)
+			local Sliding = false
+			local Dragging = false
+			-- Instances:
+			FolderSize += 45.5
+			FoldersSize += 45.5
+
+
+			local Slider = Instance.new("TextLabel")
+			local UICorner = Instance.new("UICorner")
+			local SliderBase = Instance.new("Frame")
+			local Circle = Instance.new("Frame")
+			local UICorner_2 = Instance.new("UICorner")
+			local BigCircle = Instance.new("Frame")
+			local UICorner_3 = Instance.new("UICorner")
+			local Progress = Instance.new("Frame")
+			local TextLabel = Instance.new("TextLabel")
+			local UICorner_4 = Instance.new("UICorner")
+
+			--Properties:
+
+			Slider.Name = "Slider"
+			Slider.Parent = Components
+			Slider.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+			Slider.BackgroundTransparency = 1
+			Slider.BorderSizePixel = 0
+			Slider.Position = UDim2.new(0.0495867766, 0, 0, 0)
+			Slider.Size = UDim2.new(0, 235, 0, 40)
+			Slider.Font = Enum.Font.SourceSansBold
+			Slider.Text = "   "..Text
+			Slider.TextColor3 = Color3.fromRGB(132, 132, 132)
+			Slider.TextSize = 15.000
+			Slider.TextXAlignment = Enum.TextXAlignment.Left
+			Slider.TextYAlignment = Enum.TextYAlignment.Top
+
+			UICorner.Parent = Slider
+
+			SliderBase.Name = "SliderBase"
+			SliderBase.Parent = Slider
+			SliderBase.AnchorPoint = Vector2.new(0.5, 0.5)
+			SliderBase.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+			SliderBase.BorderSizePixel = 0
+			SliderBase.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+			SliderBase.Size = UDim2.new(0, 210, 0, 3)
+
+			Circle.Name = "Circle"
+			Circle.Parent = SliderBase
+			Circle.AnchorPoint = Vector2.new(0, 0.5)
+			Circle.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
+			Circle.Position = UDim2.new(0, 0, 0.5, 0)
+			Circle.Size = UDim2.new(0, 10, 0, 10)
+			Circle.ZIndex = 3
+
+			UICorner_2.CornerRadius = UDim.new(0, 100)
+			UICorner_2.Parent = Circle
+
+			BigCircle.Name = "BigCircle"
+			BigCircle.Parent = Circle
+			BigCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+			BigCircle.BackgroundColor3 = Color3.fromRGB(167, 198, 255)
+			BigCircle.BackgroundTransparency = 1.000
+			BigCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
+			BigCircle.Size = UDim2.new(0, 18, 0, 18)
+			BigCircle.ZIndex = 3
+
+			UICorner_3.CornerRadius = UDim.new(0, 100)
+			UICorner_3.Parent = BigCircle
+
+			local smh = Instance.new("Frame",SliderBase)
+			smh.BackgroundTransparency = 1
+			smh.BorderSizePixel = 0
+			smh.ClipsDescendants = true
+			smh.AnchorPoint = Vector2.new(0.5, 0.5)
+			smh.Position = UDim2.new(0.5, 0, 0.7, -1)
+			smh.Size = UDim2.new(0, 210, 0, 4)
+			smh.ZIndex = 2
+
+			Progress.Name = "Progress"
+			Progress.Parent = smh
+			Progress.AnchorPoint = Vector2.new(0, 0.5)
+			Progress.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
+			Progress.BorderColor3 = Color3.fromRGB(27, 42, 53)
+			Progress.BorderSizePixel = 0
+			Progress.Position = UDim2.new(0, 0, 0.5, 0)
+			Progress.Size = UDim2.new(0, 0, 0, 3)
+			Progress.ZIndex = 2
+
+			TextLabel.Parent = Slider
+			TextLabel.AnchorPoint = Vector2.new(0, 0.5)
+			TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+			TextLabel.BackgroundTransparency = 1
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Position = UDim2.new(0.838297904, 0, 0.0874999985, 10)
+			TextLabel.Size = UDim2.new(0, 35, 0, 19)
+			TextLabel.Font = Enum.Font.SourceSansBold
+			TextLabel.Text = "10"
+			TextLabel.TextColor3 = Color3.fromRGB(158, 158, 158)
+			TextLabel.TextSize = 16.000
+
+			UICorner_4.Parent = TextLabel
+
+			local Blocked = false
+
+			Slider.MouseEnter:connect(function()
+				for _ = 1,10 do wait()
+					BigCircle.BackgroundTransparency -= 0.025
+				end
+			end)
+
+			Slider.MouseLeave:connect(function()
+				for _ = 1,10 do wait()
+					BigCircle.BackgroundTransparency += 0.025
+				end
+			end)
+
+			local function move(Pressed)
+				Sliding = true;
+				local pos = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), -6, 0, 0)
+				local size = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 3), 0, 3, 0)
+				Circle:TweenPosition(pos, "Out", "Sine", 0.1, true);
+				Progress:TweenSize(size, "Out", "Sine", 0.1, true);
+				local value = math.floor(((pos.X.Scale * max) / max) * (max - min) + min)
+				TextLabel.Text = tostring(value);
+				callback(tostring(value))
+			end
+
+			Slider.InputBegan:Connect(function(Pressed)
+				if Pressed.UserInputType == Enum.UserInputType.MouseButton1 then
+					Dragging = true
+					Sliding = false 
+					move(Pressed)
+				end
+			end)
+
+			Slider.InputEnded:Connect(function(Pressed)
+				if Pressed.UserInputType == Enum.UserInputType.MouseButton1 then
+					Dragging = false
+					Sliding = false
+					move(Pressed)
+				end
+			end)
+
+			game:GetService("UserInputService").InputChanged:Connect(function(Pressed)
+				if Dragging and Pressed.UserInputType == Enum.UserInputType.MouseMovement then
+					move(Pressed)
+				end
+			end)
+
+		end
+
+		function InsideFolder:Button(Text,callback)
+
+			local Button = Instance.new("TextButton")
+			local UICorner = Instance.new("UICorner")
+			local ButtonText = Instance.new("TextLabel")
+			local UIGradient = Instance.new("UIGradient")
+
+			FolderSize += 45.5
+			FoldersSize += 45.5
+
+
+			Button.Name = "Button"
+			Button.Parent = Components
+			Button.BackgroundColor3 = Color3.fromRGB(186, 186, 186)
+			Button.BorderSizePixel = 0
+			Button.Size = UDim2.new(0, 235, 0, 40)
+			Button.AutoButtonColor = false
+			Button.Font = Enum.Font.SourceSansBold
+			Button.Text = ""
+			Button.TextColor3 = Color3.fromRGB(168, 168, 168)
+			Button.TextSize = 20.000
+			Button.ClipsDescendants = true
+
+			UICorner.Parent = Button
+
+			ButtonText.Name = "ButtonText"
+			ButtonText.Parent = Button
+			ButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ButtonText.BackgroundTransparency = 1.000
+			ButtonText.BorderSizePixel = 0
+			ButtonText.Size = UDim2.new(0, 235, 0, 40)
+			ButtonText.Font = Enum.Font.SourceSansBold
+			ButtonText.TextColor3 = Color3.fromRGB(189, 189, 189)
+			ButtonText.TextSize = 20.000
+			ButtonText.Text = Text
+
+			UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(75, 129, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(111, 145, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(75, 129, 255))}
+			UIGradient.Parent = Button
+
+			Button.MouseButton1Click:Connect(function()
+				spawn(callback())
+				local effect = Instance.new("Frame",Button)
+				local EffectCorner = Instance.new("UICorner",effect)
+				EffectCorner.CornerRadius = UDim.new(0, 100)
+				effect.BackgroundColor3 = Color3.fromRGB(255,255,255)
+				effect.BackgroundTransparency = 0.6
+				effect.BorderSizePixel = 0
+
+				local x, y = (ms.X - effect.AbsolutePosition.X), (ms.Y - effect.AbsolutePosition.Y)
+				effect.Position = UDim2.new(0, x, 0, y)
+				local len, size = 0.2, nil
+				if Button.AbsoluteSize.X >= Button.AbsoluteSize.Y then
+					size = (Button.AbsoluteSize.X * 1)
+				else
+					size = (Button.AbsoluteSize.Y * 3)
+				end
+				effect:TweenSizeAndPosition(UDim2.new(0.95, 0, 9, 0), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', 0.3, true, nil)
+
+				TweenFade(effect,1,0.3)
+				wait(0.35)
+
+				effect:Destroy()
+
+			end)
+			return Button;
+		end
+		function InsideFolder:Toggle(Text,callback,IsTogle)
+
+			FolderSize += 45.5
+			FoldersSize += 45.5
+			local TextButton = Instance.new("TextButton")
+			local StrokeCircle = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local InnerCircle = Instance.new("Frame")
+			local UICorner_2 = Instance.new("UICorner")
+			local Stroke = Instance.new("UIStroke",StrokeCircle)
+
+			Stroke.LineJoinMode = "Round"
+			Stroke.Color = Color3.fromRGB(154,154,154)
+			--Properties:
+
+
+
+			TextButton.Parent = Components
+			TextButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			TextButton.BackgroundTransparency = 1
+			TextButton.BorderSizePixel = 0
+			TextButton.Position = UDim2.new(0.184, 0, 0.216999993, 0)
+			TextButton.Size = UDim2.new(0, 240, 0, 40)
+			TextButton.Font = Enum.Font.SourceSansBold
+			TextButton.Text = "   "..Text
+			TextButton.TextColor3 = Color3.fromRGB(189, 189, 189)
+			TextButton.TextSize = 18.000
+			TextButton.TextXAlignment = Enum.TextXAlignment.Left
+			TextButton.AutoButtonColor = false
+
+			StrokeCircle.Name = "StrokeCircle"
+			StrokeCircle.Parent = TextButton
+			StrokeCircle.AnchorPoint = Vector2.new(0, 0.5)
+			StrokeCircle.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
+			StrokeCircle.BackgroundTransparency = 1.000
+			StrokeCircle.BorderSizePixel = 0
+			StrokeCircle.Position = UDim2.new(0.89, 0, 0.5, 0)
+			StrokeCircle.Size = UDim2.new(0, 18, 0, 18)
+
+			UICorner.CornerRadius = UDim.new(0, 100)
+			UICorner.Parent = StrokeCircle
+
+			InnerCircle.Name = "InnerCircle"
+			InnerCircle.Parent = StrokeCircle
+			InnerCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+			InnerCircle.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
+			InnerCircle.BorderSizePixel = 0
+			InnerCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
+
+
+			UICorner_2.CornerRadius = UDim.new(0, 100)
+			UICorner_2.Parent = InnerCircle
+
+			local Toggled = IsTogle
+
+			if IsTogle then
+				InnerCircle.Size = UDim2.new(0,8,0,8)
+				Stroke.Color = Color3.fromRGB(75, 129, 255)
+				spawn(function() callback(Toggled) end)
+			end
+
+			TextButton.MouseButton1Click:Connect(function()
+				spawn(function() callback(Toggled) end)
+				if not Toggled then
+					Toggled = true
+					InnerCircle:TweenSize(UDim2.new(0,8,0,8),"Out","Sine",0.05,true,nil)
+					TweenColor(Stroke,75, 129, 255,0.05 )
+				else
+					Toggled = false 
+					InnerCircle:TweenSize(UDim2.new(0,0,0,0),"In","Sine",0.05,true,nil)
+					TweenColor(Stroke,154,154,154,0.05 )
+				end
+				local Effect = Instance.new("Frame",StrokeCircle)
+				local EffectCorner = Instance.new("UICorner",Effect)
+				EffectCorner.CornerRadius = UDim.new(0, 100)
+				Effect.BackgroundColor3 = Color3.fromRGB(75, 129, 255)
+				Effect.BackgroundTransparency = 0.3
+				Effect.BorderSizePixel = 0
+				Effect.Position = UDim2.new(0.5,0,0.5,0)
+				Effect.AnchorPoint = Vector2.new(0.5,0.5)
+
+				Effect:TweenSize(UDim2.new(0,34,0,34),"Out","Sine",0.3,true,nil)
+				TweenFade(Effect,1,0.4)
+				repeat wait() until Effect.BackgroundTransparency == 1
+				Effect:Destroy()
+			end)
+			return TextButton;
+		end
+		return InsideFolder;
+	end
+
+	return Window;
 end
 return Library;
