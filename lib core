@@ -60,7 +60,7 @@ function Library:Loader(HubText,CreditsText,CommentText)
 
 	local Loader = Instance.new("ScreenGui")
 	local Zone = Instance.new("Frame")
-	local Main = Instance.new("Frame")
+	local Main = Instance.new("CanvasGroup")
 	local UIGradient = Instance.new("UIGradient")
 	local HubName = Instance.new("TextLabel")
 	local UIGradient_2 = Instance.new("UIGradient")
